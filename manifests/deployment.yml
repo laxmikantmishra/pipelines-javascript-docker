@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: laxmikantmishrapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laxmikantmishrapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: laxmikantmishrapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: laxmikantmishrapipelinesjavascriptdocker 
+          image: igenaificontainerregistry.azurecr.io/laxmikantmishrapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
